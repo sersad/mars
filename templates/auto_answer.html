@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h4>И на Марсе будут яблони цвести!</h4>
+
+    <p>Фамилия: {{ answer.surname }}</p>
+    <p>Имя: {{ answer.name }}</p>
+    <p>Образование: {{ answer.education }}</p>
+    <p>Профессия: {{ answer.profession }}</p>
+    <p>Пол: {{ answer.sex }}</p>
+    <p>Мотивация: {{ answer.motivation }}</p>
+    <p>Готовы остаться на Марсе? {{ answer.ready }}</p>
+
+
+{% endblock %}

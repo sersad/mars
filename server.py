@@ -18,9 +18,9 @@ from flask_restful import reqparse, abort, Api, Resource
 from forms.user import RegisterForm
 
 
-logging.basicConfig(level=logging.INFO,
-                    filename='logs/logfile.log',
-                    format='%(asctime)s %(levelname)s %(name)s %(message)s')
+# logging.basicConfig(level=logging.INFO,
+#                     filename='logs/logfile.log',
+#                     format='%(asctime)s %(levelname)s %(name)s %(message)s')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -294,10 +294,9 @@ def jobs_create():
     session.commit()
 
 
-if __name__ == '__main__':
-    db_session.global_init('db/mars_explorer.db')
-    # app.register_blueprint(jobs_api.blueprint)
-    # user_create()
-    # jobs_create()
-    app.register_blueprint(jobs_api.blueprint)
-    app.run(port=8080, host='127.0.0.1')
+db_session.global_init('db/mars_explorer.db')
+# app.register_blueprint(jobs_api.blueprint)
+# user_create()
+# jobs_create()
+app.register_blueprint(jobs_api.blueprint)
+app.run()

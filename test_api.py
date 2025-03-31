@@ -1,6 +1,11 @@
 from pprint import pprint
 from requests import get, post, delete, put
 
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+
 # pprint(get('http://localhost:8080/api/jobs').json())
 # pprint(get('http://localhost:8080/api/jobs/1').json())
 # pprint(get('http://localhost:8080/api/jobs/77').json())
@@ -64,12 +69,12 @@ from requests import get, post, delete, put
 # print(post('http://localhost:8080/api/v2/jobs',
 #            json={'job': 'Название работы'}).json())
 
-# print(post('http://localhost:8080/api/v2/jobs',
-#            json={'job': 'Название работы добавленное из API v2',
-#                  'work_size': 8,
-#                  'team_leader': 3,
-#                  'collaborators': "2,4"}
-#            ).json())
+print(post('http://localhost:8080/api/v2/jobs',
+           json={'job': 'Название работы добавленное из API v2',
+                 'work_size': 8,
+                 'team_leader': 3,
+                 'collaborators': "2,4"}
+           ).json())
 #
 # print(delete('http://localhost:8080/api/v2/jobs/6').json())
 # print(delete('http://localhost:8080/api/v2/jobs/99').json())

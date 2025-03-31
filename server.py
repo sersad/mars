@@ -299,4 +299,4 @@ db_session.global_init('db/mars_explorer.db')
 # user_create()
 # jobs_create()
 app.register_blueprint(jobs_api.blueprint)
-app.run()
+
